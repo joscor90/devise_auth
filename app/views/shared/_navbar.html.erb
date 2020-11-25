@@ -23,10 +23,10 @@
               <li><%=link_to 'My PicStories', stories_path %></li>
               <li><a href="#">'My Profile'</a></li>
               <li role="separator" class="divider"></li>
-              <li><%= link_to 'Sign Out', user_registration, method: :delete %> </li>
+              <li><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %> </li>
             <% else %>
-              <li><%=link_to 'Sign In', new_user_session %></li>
-              <li><%=link_to 'Sign Up', new_user_registration %></li>
+              <li><%=link_to 'Sign In', new_user_session_path %></li>
+              <li><%=link_to 'Sign Up', new_user_registration_path %></li>
             <% end %>
           </ul>
         </li>
