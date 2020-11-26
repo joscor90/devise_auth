@@ -23,6 +23,10 @@ class StoriesController < ApplicationController
 
   # POST /stories
   # POST /stories.json
+
+  def my_stories 
+    @stories = Story.where(user_id: current_user.id)
+  end
   def create
     @story = Story.new(story_params)
     @story.user_id = current_user.id
