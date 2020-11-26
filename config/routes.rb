@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   namespace :admin do
     resources :users
   end
+  patch 'make_admin/:id', to: 'admin/users#make_admin', as: "make_admin"
   root 'stories#index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
