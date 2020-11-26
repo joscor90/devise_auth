@@ -7,6 +7,8 @@ Rails.application.routes.draw do
     resources :users
   end
   patch 'make_admin/:id', to: 'admin/users#make_admin', as: "make_admin"
+  patch 'remove_admin/:id', to: 'admin/users#remove_admin', as: "remove_admin"
+
   root 'stories#index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

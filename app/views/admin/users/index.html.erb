@@ -6,7 +6,7 @@
             <th>
                 <strong>User Name</strong>
             </th>
-            <th colspan="1"></th>
+            <th colspan="2"></th>
         </tr>
     </thead>
     <tbody>
@@ -14,6 +14,7 @@
             <tr>
                 <td><%= user.name %></td>
                 <td><%= link_to 'Make Admin', make_admin_path(user), method: :patch %></td>
+                <td><%= link_to 'Remove Admin', remove_admin_path(user), method: :patch %></td>
             </tr>
         <% end %>
     </tbody>
